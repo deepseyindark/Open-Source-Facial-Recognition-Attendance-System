@@ -6,11 +6,11 @@ from datetime import datetime
 
 video_capture = cv2.VideoCapture(0)
 
-my_image = face_recognition.load_image_file("Faces/PICTURE NAME.jpg")
+my_image = face_recognition.load_image_file("[FOLDER]/[PICTURE NAME].jpg")
 my_encoding = face_recognition.face_encodings(my_image)[0]
 
 known_face_encodings = [my_encoding]
-known_face_names = ["YOUR NAME"]
+known_face_names = ["[YOUR NAME]"]
 
 students = known_face_names.copy()
 
@@ -56,7 +56,7 @@ while True:
 
 
     cv2.imshow("Face Recognition", frame)
-    if cv2.waitKey(1) & 0xFF ==ord("q"):
+    if cv2.waitKey(1) & 0xFF ==ord("e"):
         break
 
 video_capture.release()
